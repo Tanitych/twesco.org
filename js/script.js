@@ -64,3 +64,41 @@ adaptive_function2();
 //         $('.menu_drop').toggleClass('active');
 //     });
 // });
+
+$(document).ready(function () {
+    $('.slider').slick({
+        arrows: false,
+        dots: false,
+        slidesToShow: 5,
+        autoplay: false,
+        speed: 1000,
+        autoplaySpeed: 800,
+
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
+    });
+});

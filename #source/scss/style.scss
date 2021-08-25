@@ -143,6 +143,7 @@ header {
 .header__menu {
   display: flex;
   align-items: center;
+  z-index: 4;
   @media (max-width: 768px) {
     align-items: flex-start;
     flex-direction: column;
@@ -398,4 +399,371 @@ header {
 }
 .adpt_search {
   margin: 15px 0px 0px 0px;
+}
+.mainSection {
+  background: url("../img/background_img.png") no-repeat;
+  background-position: left;
+}
+.main_news {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.main_news_img {
+  position: relative;
+  width: 100%;
+  .main_img {
+    width: 100%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.116);
+  }
+}
+
+.main_title,
+h1 {
+  font-family: "Philosopher", sans-serif;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 49px;
+  color: #ffffff;
+  @media (max-width: 768px) {
+    font-size: 34px;
+    line-height: 110%;
+  }
+  @media (max-width: 465px) {
+    font-size: 22px;
+  }
+}
+.main_title {
+  transition: all ease 0.3s;
+  &:hover {
+    color: #e4e4e4;
+  }
+}
+.main_news_content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0px 40px 40px 40px;
+  @media (max-width: 768px) {
+    padding: 0px 20px 20px 20px;
+  }
+}
+
+.theme_block {
+  display: flex;
+  margin: 0px 0px 24px 0px;
+  @media (max-width: 465px) {
+    margin: 0px 0px 14px 0px;
+  }
+  a {
+    display: block;
+    width: fit-content;
+    background: #ffffff;
+    border-radius: 3px;
+    padding: 4px 9px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #3c5997;
+    margin: 0px 8px 0px 0px;
+    transition: all ease 0.3s;
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+.read_more {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  &:hover {
+    color: #ffffff;
+  }
+  &:hover .read_more_img {
+    transform: translateX(4px);
+  }
+  img {
+    margin: 0px 8px 0px 0px;
+  }
+}
+.read_more_img {
+  transition: all ease 0.3s;
+}
+
+.slick-slider {
+  min-width: 0;
+}
+
+.slick-list {
+  overflow: hidden;
+  margin: 0 -7px;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slider {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .slider {
+    padding: 0px 0px;
+  }
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -30px 0px 0px 0px;
+  z-index: 10;
+  font-size: 0;
+  width: 30px;
+  height: 60px;
+  outline: none;
+  cursor: pointer;
+}
+.slider .slick-arrow.slick-prev {
+  left: 0;
+  background: url("../img/sl-arrow_l.svg") 0 0 / 100% no-repeat;
+}
+.slider .slick-arrow.slick-next {
+  right: 0;
+  background: url("../img/sl-arrow_r.svg") 0 0 / 100% no-repeat;
+}
+.slider .slick-arrow.slick-disabled {
+  opacity: 0.2;
+}
+
+.slider__item {
+  padding: 0px 0px;
+  outline: none;
+  margin: 0px 7px;
+}
+.slider__item img {
+  max-width: 100%;
+}
+.slider__item.slick-center {
+}
+
+/*dots*/
+.slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider .slick-dots li {
+  list-style: none;
+  margin: 0px 10px;
+}
+.slider .slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.slider .slick-dots li.slick-active button {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.slider_news_img {
+  display: block;
+  width: 100%;
+  max-width: 190px;
+  max-height: 120px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  @media (max-width: 450px) {
+    max-width: 200px;
+  }
+  &:hover:after {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 190px;
+    max-height: 120px;
+    object-fit: cover;
+    @media (max-width: 450px) {
+      max-width: 200px;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.116);
+    transition: all ease 0.3s;
+  }
+}
+
+.subtitle {
+  font-family: "Philosopher", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 100%;
+  color: #161519;
+  white-space: nowrap;
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
+}
+.ornament_img {
+  margin: 0px 8px 0px 0px;
+  @media (max-width: 1200px) {
+    margin: 0px 5px 0px 0px;
+  }
+}
+.imgSection {
+  margin: 80px 0px 0px 0px;
+  @media (max-width: 1200px) {
+    margin: 50px 0px 0px 0px;
+  }
+  @media (max-width: 768px) {
+    margin: 25px 0px 0px 0px;
+  }
+}
+
+.imgSection_block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  margin: 40px 0px 0px 0px;
+  @media (max-width: 1200px) {
+    margin: 25px 0px 0px 0px;
+  }
+  @media (max-width: 768px) {
+    margin: 15px 0px 0px 0px;
+    column-gap: 8px;
+  }
+
+  a {
+    display: block;
+    position: relative;
+    max-height: 328px;
+    overflow: hidden;
+    border-radius: 2px;
+    width: 100%;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.116);
+      transition: all ease 0.3s;
+    }
+    &:hover:after {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+      max-height: 382px;
+      object-fit: cover;
+    }
+  }
+}
+
+.president_aside_block {
+  display: block;
+  position: relative;
+  padding: 49px 40px 31px 40px;
+}
+.president_back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: fill;
+}
+.president_aside_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.speciality {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  opacity: 0.6;
+  margin: 0px 0px 16px 0px;
+}
+.president_img {
+  max-width: 120px;
+  max-height: 120px;
+  margin: 0px 0px 8px 0px;
+}
+.president_name {
+  font-family: "Philosopher", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 27px;
+  text-align: center;
+  color: #ffffff;
+}
+.president_text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.subtitle.bb {
+  border-bottom: 1px solid #1615192d;
+  padding: 0px 0px 16px 0px;
+}
+.magaz_img {
+  overflow: hidden;
+  display: block;
+  border-radius: 10px;
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    max-height: 415px;
+  }
+}
+
+.second_aside_block {
+  margin: 27px 0px 30px 0px;
+  width: 100%;
+  @media (max-width: 992px) {
+    margin: 35px 0px 30px 0px;
+  }
+}
+
+.section2 {
+  margin: 70px 0px 70px 0px;
+  @media (max-width: 992px) {
+    margin: 40px 0px 40px 0px;
+  }
 }
