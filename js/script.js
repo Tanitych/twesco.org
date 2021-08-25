@@ -11,6 +11,13 @@ $(document).ready(function () {
     })
 })
 
+$(".js-video-button").modalVideo({
+    youtube: {
+        controls: 0,
+        nocookie: true,
+    },
+});
+
 //Adaptive functions
 $(window).resize(function (event) {
     adaptive_function();
