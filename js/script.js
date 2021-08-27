@@ -25,7 +25,7 @@ $(window).resize(function (event) {
 function adaptive_header(w, h) {
     var headerMenu = $('.adpt_social');
     var headerLang = $('.social');
-    if (w < 769) {
+    if (w < 992) {
         if (!headerLang.hasClass('done')) {
             headerLang.addClass('done').appendTo(headerMenu);
         }
@@ -49,7 +49,7 @@ $(window).resize(function (event) {
 function adaptive_header2(w, h) {
     var headerMenu2 = $('.adpt_search');
     var headerLang2 = $('.search');
-    if (w < 769) {
+    if (w < 992) {
         if (!headerLang2.hasClass('done')) {
             headerLang2.addClass('done').appendTo(headerMenu2);
         }
@@ -65,12 +65,6 @@ function adaptive_function2() {
     adaptive_header2(w, h);
 }
 adaptive_function2();
-
-// $(document).ready(function () {
-//     $('.header__link').hover(function (event) {
-//         $('.menu_drop').toggleClass('active');
-//     });
-// });
 
 $(document).ready(function () {
     $('.slider').slick({
