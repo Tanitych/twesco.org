@@ -406,7 +406,7 @@ header {
 
 main {
   // margin: 0px 0px 340px 0px;
-  padding: 0px 0px 60px 0px;
+  padding: 0px 0px 70px 0px;
   // background-color: #ffffff;
   @media (max-width: 768px) {
     padding: 0px 0px 40px 0px;
@@ -1884,6 +1884,10 @@ a.footer_down_item {
     font-size: 14px;
     line-height: 120%;
     color: #000000;
+    transition: all ease 0.2s;
+    &:hover {
+      color: var(--blue);
+    }
   }
 }
 .breadcrumb-item::after {
@@ -2048,5 +2052,101 @@ a.footer_down_item {
     &.active {
       background: #dbdbdb !important;
     }
+  }
+}
+
+.single_news_text.font-24 {
+  font-size: 24px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.pdfArticle_block {
+  background: #ffffff;
+  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.03), 0px 1px 2px rgba(0, 0, 0, 0.05),
+    0px 15px 40px rgba(0, 0, 0, 0.03), 0px 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  display: flex;
+  padding: 50px 47px;
+  @media (max-width: 768px) {
+    padding: 20px 15px;
+  }
+  .left {
+    @media (min-width: 1200px) {
+      margin: 0px 120px 0px 0px;
+    }
+  }
+  .right {
+    .img {
+      overflow: hidden;
+      border-radius: 10px;
+      img {
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
+}
+.pdfLinks {
+  margin: 40px 0px 0px 0px;
+  @media (max-width: 768px) {
+    margin: 20px 0px 0px 0px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -30px;
+    padding: 0px 0px 0px 0px;
+    li {
+      margin: 2px 30px;
+      a {
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 130%;
+        color: #222222;
+        white-space: nowrap;
+        transition: all ease 0.2s;
+        &:hover {
+          color: #3c5997;
+        }
+        &.active {
+          color: #3c5997;
+        }
+      }
+    }
+  }
+}
+
+.video_block {
+  .academyNews_img_block {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url("/img/icons/play.svg") no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+.searchPage {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 425px) {
+    grid-template-columns: 1fr;
   }
 }
