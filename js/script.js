@@ -136,12 +136,6 @@ $(document).ready(function () {
         ]
     });
 });
-$(document).ready(function () {
-    $("#openbook__flipbook").flipBook({
-        pdfUrl: "pdf/KuttyBilik.pdf",
-    });
-
-})
 var map;
 DG.then(function () {
     map = DG.map('map', {
