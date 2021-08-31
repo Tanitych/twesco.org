@@ -2240,3 +2240,15 @@ a.footer_down_item {
   color: var(--text-color-3);
   margin: 0 10px 0 0;
 }
+
+.openbook__share ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.openbook__share ul li {
+  margin: 0 10px 0 0;
+}

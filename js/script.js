@@ -136,7 +136,12 @@ $(document).ready(function () {
         ]
     });
 });
+$(document).ready(function () {
+    $("#openbook__flipbook").flipBook({
+        pdfUrl: "pdf/KuttyBilik.pdf",
+    });
 
+})
 var map;
 DG.then(function () {
     map = DG.map('map', {
@@ -146,9 +151,3 @@ DG.then(function () {
 
     DG.marker([43.2522, 76.9343]).addTo(map);
 });
-$(document).ready(function () {
-    $("#openbook__flipbook").flipBook({
-        pdfUrl: "pdf/KuttyBilik.pdf",
-    });
-
-})
