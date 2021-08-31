@@ -136,3 +136,19 @@ $(document).ready(function () {
         ]
     });
 });
+
+var map;
+DG.then(function () {
+    map = DG.map('map', {
+        center: [43.2522, 76.9343],
+        zoom: 13
+    });
+
+    DG.marker([43.2522, 76.9343]).addTo(map);
+});
+$(document).ready(function () {
+    $("#openbook__flipbook").flipBook({
+        pdfUrl: "pdf/KuttyBilik.pdf",
+    });
+
+})
